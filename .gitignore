@@ -12,3 +12,7 @@
 
 # Editors
 .vscode/
+
+#node-modules
+server/node_modules
+server/package-lock.json
