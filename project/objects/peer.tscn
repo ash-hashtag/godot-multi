@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c43ndl8832rwd"]
+
+[ext_resource type="Script" path="res://scripts/peer.gd" id="1_ojlk8"]
+
+[node name="Peer" type="Node"]
+script = ExtResource("1_ojlk8")

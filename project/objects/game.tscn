@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg1e1gcbs4ct0"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_3op8v"]
+[ext_resource type="PackedScene" uid="uid://bj84qvy040mie" path="res://objects/player.tscn" id="1_bifs3"]
+[ext_resource type="PackedScene" uid="uid://b61raerq34ep" path="res://objects/client.tscn" id="2_0radp"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_3op8v")
+
+[node name="Client" parent="." instance=ExtResource("2_0radp")]
+
+[node name="Player" parent="." instance=ExtResource("1_bifs3")]
+
+[node name="Camera2d" type="Camera2D" parent="."]
+current = true

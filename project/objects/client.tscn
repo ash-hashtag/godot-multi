@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b61raerq34ep"]
+
+[ext_resource type="Script" path="res://scripts/client.gd" id="1_ru7jg"]
+[ext_resource type="PackedScene" uid="uid://c43ndl8832rwd" path="res://objects/peer.tscn" id="2_do1yp"]
+
+[node name="Client" type="Node"]
+script = ExtResource("1_ru7jg")
+metadata/_edit_vertical_guides_ = []
+metadata/_edit_horizontal_guides_ = []
+
+[node name="Peer" parent="." instance=ExtResource("2_do1yp")]

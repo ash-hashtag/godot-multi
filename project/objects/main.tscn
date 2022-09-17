@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://x1j3jurbsjci"]
+
+[ext_resource type="Script" path="res://demo/demo.gd" id="1_hk1yq"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_hk1yq")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1154.0
+offset_bottom = 643.0
+
+[node name="button" type="Button" parent="Control"]
+offset_left = 64.0
+offset_top = 80.0
+offset_right = 195.0
+offset_bottom = 179.0
+text = "start
+"
+
+[node name="messages" type="Label" parent="Control"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -874.0
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -47.0
+offset_right = -269.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="sendbtn" type="Button" parent="Control"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -199.0
+offset_top = -49.0
+offset_right = -101.0
+offset_bottom = -9.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "send"

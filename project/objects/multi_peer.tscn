@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://brm4bdme4b43k"]
+
+[ext_resource type="Script" path="res://scripts/multi_peer.gd" id="1_py6ln"]
+
+[node name="MultiPeer" type="Node"]
+script = ExtResource("1_py6ln")

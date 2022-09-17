@@ -1,0 +1,16 @@
+[configuration]
+
+entry_symbol = "webrtc_extension_init"
+
+[libraries]
+
+linux.x86_64 = "res://webrtc_debug/lib/libwebrtc_native.linux.debug.x86_64.so"
+linux.x86_32 = "res://webrtc_debug/lib/libwebrtc_native.linux.debug.x86_32.so"
+osx.x86_64 = "res://webrtc_debug/lib/libwebrtc_native.osx.debug.x86_64.dylib"
+osx.arm64 = "res://webrtc_debug/lib/libwebrtc_native.osx.debug.arm64.dylib"
+windows.x86_64 = "res://webrtc_debug/lib/libwebrtc_native.windows.debug.x86_64.dll"
+windows.x86_32 = "res://webrtc_debug/lib/libwebrtc_native.windows.debug.x86_32.dll"
+android.arm64 = "res://webrtc_debug/lib/libwebrtc_native.android.debug.arm64.so"
+android.x86_64 = "res://webrtc_debug/lib/libwebrtc_native.android.debug.x86_64.so"
+ios.arm64 = "res://webrtc_debug/lib/libwebrtc_native.ios.debug.arm64.dylib"
+ios.x86_64 = "res://webrtc_debug/lib/libwebrtc_native.ios.debug.x86_64.simulator.dylib"
