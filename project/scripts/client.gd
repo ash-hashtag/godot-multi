@@ -1,6 +1,7 @@
 extends Node
 
-const websocketUrl = "ws://127.0.0.1:3030"
+const websocketUrl = "wss://lupy-ash-hashtag.koyeb.app"
+#const websocketUrl = "http://127.0.0.1:8080"
 @onready var peer = $Peer
 var _client = WebSocketClient.new()
 

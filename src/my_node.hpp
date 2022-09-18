@@ -13,6 +13,7 @@ protected:
 	static void _bind_methods();
 
 public:
+	
 	MyNode();
 	~MyNode();
 

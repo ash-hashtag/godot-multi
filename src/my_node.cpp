@@ -30,7 +30,7 @@ void MyNode::_process(double delta)
 
 void MyNode::hello_node()
 {
-	UtilityFunctions::print("Hello from GDExtension Node!");
+	UtilityFunctions::print("Hello World from GDExtension Node!");
 	auto parent = get_parent();
 	if (parent != nullptr && parent->has_method("hello"))
 	{

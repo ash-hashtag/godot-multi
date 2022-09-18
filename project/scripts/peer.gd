@@ -24,17 +24,20 @@ func _process(_delta):
 	peer.poll()
 
 	if chat.get_ready_state() == chat.STATE_OPEN && chat.get_available_packet_count() > 0:
-		var packet = chat.get_packet().get_string_from_utf8()
-		_peer_transform.emit(packet)
+		var packet = chat.get_packet()
+		var sbp = StreamPeerBuffer.new()
+		sbp.data_array = packet
+		_peer_transform.emit(sbp)
 
 func send_message(text: String):
 	chat.put_packet(text.to_utf8_buffer())
 
 func send(tr: Array[float]):
 	tr.append(p_id)
+	var sbp = StreamPeerBuffer.new()
+	sbp.put_var(tr)
 	if peer.get_connection_state() == peer.STATE_CONNECTED:
-		print("sent ", tr)
-		chat.put_packet(JSON.stringify(tr).to_utf8_buffer())
+		chat.put_packet(sbp.data_array)
 #	else:
 #		print(peer.get_connection_state())
 
