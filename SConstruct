@@ -36,6 +36,8 @@ if env["platform"] == "macos":
         source=sources,
     )
 else:
+    env.Append(LIBS=["steam_api64"])
+    env.Append(LIBPATH=["src/sdk/redistributable_bin/win64"])
     library = env.SharedLibrary(
         "{0}/bin/lib{1}.{2}.{3}.{4}{5}".format(
             addon_path,

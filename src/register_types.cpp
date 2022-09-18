@@ -9,10 +9,12 @@
 
 #include "my_node.hpp"
 #include "my_singleton.hpp"
+#include "godotsteam.hpp"
 
 using namespace godot;
 
 static MySingleton *_my_singleton;
+static Steam* SteamPtr = NULL;
 
 void gdextension_initialize(ModuleInitializationLevel p_level)
 {
@@ -20,6 +22,10 @@ void gdextension_initialize(ModuleInitializationLevel p_level)
 	{
 		ClassDB::register_class<MyNode>();
 		ClassDB::register_class<MySingleton>();
+
+		ClassDB::register_class<Steam>();
+		SteamPtr = memnew(Steam);
+		Engine::get_singleton()->register_singleton("Steam", Steam::get_singleton());
 
 		_my_singleton = memnew(MySingleton);
 		Engine::get_singleton()->register_singleton("MySingleton", MySingleton::get_singleton());
@@ -32,6 +38,9 @@ void gdextension_terminate(ModuleInitializationLevel p_level)
 	{
 		Engine::get_singleton()->unregister_singleton("MySingleton");
 		memdelete(_my_singleton);
+
+		Engine::get_singleton()->unregister_singleton("Steam");
+		memdelete(SteamPtr);
 	}
 }
 
