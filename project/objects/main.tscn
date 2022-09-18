@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://x1j3jurbsjci"]
+[gd_scene load_steps=2 format=3 uid="uid://801y7k860lh3"]
 
-[ext_resource type="Script" path="res://demo/demo.gd" id="1_hk1yq"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_hk1yq"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_hk1yq")
@@ -12,6 +12,7 @@ offset_right = 1154.0
 offset_bottom = 643.0
 
 [node name="button" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 64.0
 offset_top = 80.0
 offset_right = 195.0
